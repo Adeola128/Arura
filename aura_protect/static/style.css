@@ -197,6 +197,25 @@
     color: var(--accent-gold);
 }
 
+/* Form Messages (for login/registration feedback) */
+.form-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    text-align: center;
+}
+.form-message.success {
+    background-color: #e6ffed;
+    color: #004D40; /* Deep Teal for consistency */
+    border: 1px solid #b3ffc6;
+}
+.form-message.error {
+    background-color: #ffe6e6;
+    color: #D32F2F; /* A suitable red */
+    border: 1px solid #ffb3b3;
+}
+
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
@@ -204,9 +223,19 @@
         width: 95%;
     }
 
+    header nav ul {
+        padding-left: 0; /* Ensure no extra padding when items are stacked */
+    }
     header nav ul li {
         display: block;
         margin: 10px 0;
+        text-align: center; /* Center nav links when stacked */
+    }
+    #navWelcomeMessage {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-top: 0;
     }
 
     .hero-section h1 {
@@ -236,4 +265,11 @@
     .grid-container {
         grid-template-columns: 1fr; /* Stack items on very small screens */
     }
+}
+
+/* Navigation Welcome Message Style */
+.nav-welcome-text span {
+    color: var(--accent-gold); /* Or var(--background-off-white) if preferred */
+    padding: 0.5em 0;
+    display: inline-block;
 }

@@ -54,3 +54,60 @@
   - Micro-interaction example added to `script.js` for buttons.
 
 *(Note: Replace YYYY-MM-DD with the actual date of completion)*
+
+---
+
+## v0.1.dev - Simulated User Authentication - YYYY-MM-DD
+
+- **Authentication Logic (`aura_protect/auth_logic.py`)**:
+  - Created `User` class with attributes for ID, fullname, email, password hash (mocked), and account type.
+  - Implemented `MOCK_USERS_DB` (in-memory list) to store user objects.
+  - Added `mock_hash_password` and `mock_verify_password` for simulating password security.
+  - Developed `register_user` function:
+    - Validates inputs.
+    - Checks for existing emails in `MOCK_USERS_DB`.
+    - Adds new `User` object to the mock database.
+  - Developed `login_user` function:
+    - Validates inputs.
+    - Retrieves user by email from `MOCK_USERS_DB`.
+    - Verifies password using `mock_verify_password`.
+    - Sets `user.is_authenticated = True` on the user object.
+  - Developed `logout_user` function:
+    - Sets `user.is_authenticated = False` on the user object.
+
+- **Client-Side Simulation (`aura_protect/static/script.js`)**:
+  - Implemented `mockClientSession` object to hold client-side authentication state (current user, isAuthenticated).
+  - Used `sessionStorage` to persist `currentUser` data across page loads within the same tab, simulating a session.
+  - Created `clientSideUserStore` (JavaScript array) to mirror `MOCK_USERS_DB` for client-side validation simulation (e.g., checking if email exists during registration before a "server" call).
+  - Added `mockApiRegisterUser`, `mockApiLoginUser`, `mockApiLogoutUser` asynchronous functions:
+    - Simulate network delays using `setTimeout`.
+    - Interact with `clientSideUserStore` and `sessionStorage`.
+    - Return Promise-based results mimicking API responses (success/failure, messages).
+  - Attached event listeners to registration (`#registrationForm`) and login (`#loginForm`) forms:
+    - Prevent default form submission.
+    - Perform client-side validation (e.g., password match, terms agreement).
+    - Call respective mock API functions.
+    - Display success or error messages dynamically in designated divs (`#registrationMessage`, `#loginMessage`).
+  - Implemented `updateNavigation` function:
+    - Called on `DOMContentLoaded` and after login/logout actions.
+    - Dynamically alters navigation links in `base.html` based on `mockClientSession.isAuthenticated`.
+    - Shows/hides "Login", "Register", "Creator Dashboard", "Logout" links.
+    - Displays a "Welcome, [User Name]!" message.
+  - Restored session state from `sessionStorage` on `DOMContentLoaded`.
+
+- **HTML Updates for Authentication**:
+  - **`aura_protect/templates/base.html`**:
+    - Modified navigation section to allow dynamic link injection by `script.js`.
+    - Added `<div id="navWelcomeMessage">` for displaying user's name.
+  - **`aura_protect/templates/register.html`**:
+    - Assigned `id="registrationForm"` to the form.
+    - Added `<div id="registrationMessage">` for feedback.
+  - **`aura_protect/templates/login.html`**:
+    - Assigned `id="loginForm"` to the form.
+    - Added `<div id="loginMessage">` for feedback.
+
+- **CSS Updates (`aura_protect/static/style.css`)**:
+  - Added styles for `.form-message.success` and `.form-message.error` to provide visual feedback on forms.
+  - Added styles for `.nav-welcome-text` and responsive adjustments for navigation elements.
+
+*(Note: Replace YYYY-MM-DD with the actual date of completion for this section as well)*

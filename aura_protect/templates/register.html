@@ -6,7 +6,8 @@
 <div class="form-container">
     <h1>Create Your AuraProtect Account</h1>
     <p>Join as a Creator or a Buyer/Collector.</p>
-    <form action="#" method="post"> <!-- Action URL will be defined by backend framework -->
+    <div id="registrationMessage" class="form-message" role="alert"></div> <!-- For success/error messages -->
+    <form id="registrationForm" action="#" method="post"> <!-- Added id -->
         <div class="form-group">
             <label for="fullname">Full Name</label>
             <input type="text" id="fullname" name="fullname" required>
