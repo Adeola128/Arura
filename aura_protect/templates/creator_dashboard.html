@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Creator Dashboard - AuraProtect{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <h1>Creator Dashboard</h1>
+    <p>Welcome back, [Creator Name Placeholder]! Manage your assets, track protection, and view earnings.</p>
+    <p><em><strong>Note:</strong> This page would typically require login. For v0.dev, it's a static representation.</em></p>
+</section>
+
+<div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+
+    <section id="asset-management" class="creator-dashboard-section">
+        <h3>Asset Management</h3>
+        <p>Upload new assets, edit existing listings, and manage your portfolio.</p>
+        <a href="#upload-asset" class="button">Upload New Asset</a>
+        <a href="#view-my-assets" class="button" style="background-color: #eee; color: var(--primary-deep-teal); margin-left: 10px;">View My Assets (3)</a>
+
+        <!-- Placeholder for list of assets or summary -->
+        <div style="margin-top: 20px; padding: 10px; background-color: #f9f9f9; border-radius: 4px;">
+            <p><strong>Recent Assets:</strong></p>
+            <ul>
+                <li>"Nok Terracotta Replica" - Active Listing, Protected</li>
+                <li>"Lagos Street Vibes (Afrobeat Track)" - Draft, Protection Pending</li>
+                <li>"Adire Silk Scarf Design" - Sold, Archived</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="ip-status" class="creator-dashboard-section">
+        <h3>IP Protection Status</h3>
+        <p>Monitor the protection status of your assets and view any infringement alerts.</p>
+        <a href="/ip-protection" class="button">My IP Protection Overview</a>
+
+        <!-- Placeholder for IP status summary -->
+        <div style="margin-top: 20px; padding: 10px; background-color: #f9f9f9; border-radius: 4px;">
+            <p><strong>Protection Summary:</strong></p>
+            <ul>
+                <li>Assets Protected: <strong>2</strong></li>
+                <li>Potential Infringement Alerts: <strong>0</strong> (View Alerts)</li>
+                <li>Last Scan: Today, 10:00 AM</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="earnings-payouts" class="creator-dashboard-section">
+        <h3>Earnings & Payouts</h3>
+        <p>Track your sales, current balance, and request payouts.</p>
+        <p><strong>Current Balance:</strong> $[Placeholder Balance, e.g., 150.00]</p>
+        <button class="button" disabled>Request Payout (Min. $50)</button>
+        <a href="#transaction-history" style="display:block; margin-top:10px;">View Transaction History</a>
+    </section>
+
+    <section id="analytics" class="creator-dashboard-section">
+        <h3>Analytics</h3>
+        <p>Basic insights into your asset views and sales performance.</p>
+        <!-- Placeholder for analytics data -->
+        <div style="margin-top: 20px; padding: 10px; background-color: #f9f9f9; border-radius: 4px;">
+            <p><strong>Last 30 Days:</strong></p>
+            <ul>
+                <li>Total Asset Views: [e.g., 1,204]</li>
+                <li>Sales: [e.g., 3]</li>
+                <li>Top Performing Asset: "[Nok Terracotta Replica]"</li>
+            </ul>
+            <a href="#full-analytics">View Full Analytics Report</a>
+        </div>
+    </section>
+
+    <section id="communication" class="creator-dashboard-section">
+        <h3>Communication</h3>
+        <p>Check messages from buyers or platform support.</p>
+        <a href="#inbox" class="button">Open Inbox (2 Unread)</a>
+        <!-- Placeholder for message snippet -->
+        <div style="margin-top: 15px;">
+            <p><strong>Recent Message:</strong> From "CollectorArt123" regarding "Nok Terracotta Replica" - <em>"Beautiful piece! Do you ship internationally?"</em></p>
+        </div>
+    </section>
+
+    <section id="profile-settings" class="creator-dashboard-section">
+        <h3>Profile & Settings</h3>
+        <p>Manage your public profile, account details, and notification preferences.</p>
+        <a href="#edit-profile" class="button">Edit Profile</a>
+        <a href="#account-settings" class="button" style="background-color: #eee; color: var(--primary-deep-teal); margin-left: 10px;">Account Settings</a>
+    </section>
+
+</div>
+{% endblock %}

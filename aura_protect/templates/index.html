@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}AuraProtect - Safeguarding Nigeria's Creative Soul{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <!-- Placeholder for Logo -->
+    <!-- <img src="{{ url_for('static', filename='images/logo.png') }}" alt="AuraProtect Logo" class="logo-image"> -->
+    <h1>AuraProtect</h1>
+    <p class="slogan">Safeguarding Nigeria's Creative Soul.</p>
+    <a href="/marketplace" class="button cta-button">Explore Marketplace</a>
+    <a href="/ip-protection" class="button cta-button">Protect Your Art</a>
+</section>
+
+<section id="featured-assets" class="content-section">
+    <h2>Featured Cultural Assets</h2>
+    <div class="grid-container">
+        <!-- Placeholder Asset Cards -->
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Artwork+1" alt="Featured Asset 1">
+            <h3>Unique Sculpture</h3>
+            <p>Artist: Jane Doe</p>
+            <p>Price: $500</p>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Music+Album" alt="Featured Asset 2">
+            <h3>Afrobeat Rhythms</h3>
+            <p>Artist: John Kuti</p>
+            <p>Price: $15</p>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Fashion+Item" alt="Featured Asset 3">
+            <h3>Handwoven Adire Gown</h3>
+            <p>Designer: Adewale Studios</p>
+            <p>Price: $250</p>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Literary+Work" alt="Featured Asset 4">
+            <h3>Tales of the Niger</h3>
+            <p>Author: Chiamaka Adebayo</p>
+            <p>Price: $20</p>
+        </div>
+    </div>
+</section>
+
+<section id="ip-overview" class="content-section" style="background-color: #e0f2f1;"> <!-- Light teal accent -->
+    <h2>AI-Powered IP Protection</h2>
+    <p>Discover how AuraProtect uses cutting-edge AI to monitor, watermark, and help you safeguard your intellectual property. Our platform provides robust tools to ensure your creative works remain yours.</p>
+    <a href="/ip-protection" class="button">Learn More</a>
+</section>
+
+<section id="testimonials" class="content-section">
+    <h2>What Our Users Say</h2>
+    <div class="grid-container">
+        <!-- Placeholder Testimonials -->
+        <div class="testimonial-card">
+            <p>"AuraProtect helped me find a buyer for my art and ensured my work was protected. Highly recommended!"</p>
+            <h4>- Adeola, Artist</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"As a collector, I appreciate the verified authenticity and clear IP details. A trustworthy platform."</p>
+            <h4>- Mr. Ibrahim, Collector</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"The IP protection service is a game-changer for Nigerian creators. Finally, a way to secure our digital footprint."</p>
+            <h4>- Femi, Musician</h4>
+        </div>
+    </div>
+</section>
+
+<section id="creator-cta" class="content-section" style="background-color: var(--accent-gold); color: var(--primary-deep-teal);">
+    <h2 style="color: var(--primary-deep-teal);">Join AuraProtect Today!</h2>
+    <p style="color: var(--primary-deep-teal);">Are you a Nigerian creator? Showcase your talent to the world and protect your masterpieces with our state-of-the-art IP services.</p>
+    <a href="/register" class="button" style="background-color: var(--primary-deep-teal); color: var(--background-off-white);">Sign Up as a Creator</a>
+</section>
+
+{% endblock %}

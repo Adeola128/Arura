@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Marketplace - AuraProtect{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <h1>Explore the Marketplace</h1>
+    <p>Discover unique Nigerian cultural assets from talented creators.</p>
+</section>
+
+<section class="search-filter-section">
+    <input type="text" placeholder="Search assets by name, artist, keyword...">
+    <button class="button">Search</button>
+    <!-- Placeholder for advanced filters -->
+    <div style="margin-top: 15px;">
+        <strong>Filter by:</strong>
+        <select name="category" style="padding: 8px; margin-right: 10px; border-radius: 3px;">
+            <option value="">All Categories</option>
+            <option value="art">Art</option>
+            <option value="music">Music</option>
+            <option value="film">Film</option>
+            <option value="fashion">Fashion</option>
+            <option value="literature">Literature</option>
+            <option value="crafts">Crafts</option>
+        </select>
+        <select name="price_range" style="padding: 8px; margin-right: 10px; border-radius: 3px;">
+            <option value="">Any Price</option>
+            <option value="0-50">$0 - $50</option>
+            <option value="51-200">$51 - $200</option>
+            <option value="201-1000">$201 - $1000</option>
+            <option value="1000+">$1000+</option>
+        </select>
+        <!-- More filters can be added here: artist, popularity -->
+    </div>
+</section>
+
+<section id="asset-listings" class="content-section">
+    <h2>All Assets</h2>
+    <div class="grid-container">
+        <!-- Placeholder Asset Cards - More examples -->
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Artwork+A" alt="Asset A">
+            <h3>Traditional Mask</h3>
+            <p>Artist: Unknown Master</p>
+            <p>Price: $750</p>
+            <a href="/marketplace/asset-a" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Music+Single" alt="Asset B">
+            <h3>Echoes of Lagos</h3>
+            <p>Artist: Urban Soundscapes</p>
+            <p>Price: $5</p>
+            <a href="/marketplace/asset-b" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Short+Film" alt="Asset C">
+            <h3>Nollywood Dreams</h3>
+            <p>Director: Ifeanyi Chukwuma</p>
+            <p>Price: $25 (Rental)</p>
+            <a href="/marketplace/asset-c" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Handcrafted+Jewelry" alt="Asset D">
+            <h3>Beaded Necklace</h3>
+            <p>Artisan: Amina Bello</p>
+            <p>Price: $80</p>
+            <a href="/marketplace/asset-d" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=E-Book" alt="Asset E">
+            <h3>The Harmattan Wind</h3>
+            <p>Author: Nneka Okoro</p>
+            <p>Price: $12</p>
+            <a href="/marketplace/asset-e" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+        </div>
+        <div class="asset-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Textile+Art" alt="Asset F">
+            <h3>Aso Oke Fabric</h3>
+            <p>Weaver: Yoruba Collective</p>
+            <p>Price: $150</p>
+            <a href="/marketplace/asset-f" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+        </div>
+        <!-- Add more asset cards as needed to demonstrate layout -->
+    </div>
+
+    <!-- Placeholder for Pagination -->
+    <div class="pagination" style="text-align: center; margin-top: 30px;">
+        <a href="#" style="padding: 10px 15px; margin: 0 5px; border: 1px solid var(--accent-gold); text-decoration: none; color: var(--accent-gold); border-radius:3px;">&laquo; Prev</a>
+        <a href="#" style="padding: 10px 15px; margin: 0 5px; border: 1px solid var(--accent-gold); text-decoration: none; color: var(--accent-gold); border-radius:3px; background-color: var(--accent-gold); color: var(--primary-deep-teal);">1</a>
+        <a href="#" style="padding: 10px 15px; margin: 0 5px; border: 1px solid var(--accent-gold); text-decoration: none; color: var(--accent-gold); border-radius:3px;">2</a>
+        <a href="#" style="padding: 10px 15px; margin: 0 5px; border: 1px solid var(--accent-gold); text-decoration: none; color: var(--accent-gold); border-radius:3px;">3</a>
+        <a href="#" style="padding: 10px 15px; margin: 0 5px; border: 1px solid var(--accent-gold); text-decoration: none; color: var(--accent-gold); border-radius:3px;">Next &raquo;</a>
+    </div>
+</section>
+{% endblock %}

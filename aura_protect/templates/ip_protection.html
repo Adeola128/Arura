@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}IP Protection Services - AuraProtect{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <h1>Secure Your Creativity with AuraProtect</h1>
+    <p>Our advanced AI-powered services offer comprehensive intellectual property protection for Nigerian creators.</p>
+</section>
+
+<section id="overview-services" class="ip-protection-section">
+    <h2>Overview of Our IP Protection Services</h2>
+    <p>At AuraProtect, we provide a suite of tools designed to safeguard your cultural assets in the digital age. Our services include:</p>
+    <ul>
+        <li><strong>AI-Powered IP Monitoring:</strong> Continuous automated scanning across the web to detect unauthorized use of your registered assets. We alert you to potential infringements.</li>
+        <li><strong>Digital Watermarking:</strong> Subtly embed imperceptible watermarks into your digital assets (images, audio, video) to prove ownership and deter theft.</li>
+        <li><strong>Legal Assistance Framework:</strong> While we don't offer direct legal services, we provide resources, template documents, and connections to legal professionals specializing in IP law in Nigeria. (Future Enhancement)</li>
+        <li><strong>Asset Registration:</strong> A secure platform to register your creative works, creating a timestamped record of your ownership.</li>
+    </ul>
+</section>
+
+<section id="how-it-works" class="ip-protection-section" style="background-color: #e0f2f1;">
+    <h2>How It Works: Protecting Your Assets</h2>
+    <p>Getting started with AuraProtect's IP protection is simple:</p>
+    <ol>
+        <li><strong>Register as a Creator:</strong> Sign up on our platform and complete your creator profile.</li>
+        <li><strong>Upload Your Asset:</strong> Submit your digital asset (artwork, music file, manuscript, etc.) through your creator dashboard.</li>
+        <li><strong>Provide Asset Details:</strong> Add relevant information about your work, including title, description, and creation date.</li>
+        <li><strong>Choose Protection Tier:</strong> Select a pricing plan that suits your needs (details below). Basic registration may be free, with advanced features like AI monitoring available in premium tiers.</li>
+        <li><strong>Automated Protection:</strong> Once submitted and approved (if applicable), your asset can be digitally watermarked and entered into our AI monitoring system (based on your subscription).</li>
+        <li><strong>Receive Alerts:</strong> Get notified through your dashboard of any potential infringements detected by our AI.</li>
+    </ol>
+</section>
+
+<section id="pricing-tiers" class="ip-protection-section">
+    <h2>Pricing & Subscription Tiers</h2>
+    <p>We offer flexible options to meet the diverse needs of Nigerian creatives. (Detailed pricing is illustrative and subject to change).</p>
+
+    <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="testimonial-card" style="text-align:left;"> <!-- Reusing testimonial-card style for pricing tiers for now -->
+            <h3>Basic Shield (Free Tier - Conceptual)</h3>
+            <p><strong>Cost:</strong> Free</p>
+            <ul>
+                <li>Secure Asset Registration (up to 5 assets)</li>
+                <li>Basic Digital Watermarking (AuraProtect branding)</li>
+                <li>Creator Profile</li>
+                <li>Marketplace Listing Option</li>
+            </ul>
+            <a href="/register" class="button" style="margin-top: 15px;">Get Started</a>
+        </div>
+
+        <div class="testimonial-card" style="text-align:left; border: 2px solid var(--accent-gold);">
+            <h3>Creator Plus (Most Popular - Conceptual)</h3>
+            <p><strong>Cost:</strong> $10/month (or equivalent in NGN)</p>
+            <ul>
+                <li>Secure Asset Registration (up to 50 assets)</li>
+                <li>Advanced Digital Watermarking (Customizable/Invisible)</li>
+                <li>AI-Powered IP Monitoring (Basic Coverage)</li>
+                <li>Infringement Alerts</li>
+                <li>Enhanced Creator Profile</li>
+                <li>Priority Marketplace Listing</li>
+            </ul>
+            <a href="/register" class="button" style="margin-top: 15px;">Choose Creator Plus</a>
+        </div>
+
+        <div class="testimonial-card" style="text-align:left;">
+            <h3>Guardian Pro (Premium - Conceptual)</h3>
+            <p><strong>Cost:</strong> $25/month (or equivalent in NGN)</p>
+            <ul>
+                <li>Secure Asset Registration (Unlimited assets)</li>
+                <li>Premium Digital Watermarking Suite</li>
+                <li>Comprehensive AI-Powered IP Monitoring (Extended Coverage)</li>
+                <li>Detailed Infringement Reports</li>
+                <li>Access to Legal Resource Hub (Templates, Guides)</li>
+                <li>Dedicated Support</li>
+                <li>Top-Tier Marketplace Visibility</li>
+            </ul>
+            <a href="/register" class="button" style="margin-top: 15px;">Go Guardian Pro</a>
+        </div>
+    </div>
+    <p style="margin-top: 20px; text-align: center;"><em>All paid plans come with a 14-day free trial. Annual subscription options with discounts will be available.</em></p>
+</section>
+
+<section id="cta-protect" class="content-section" style="background-color: var(--accent-gold); color: var(--primary-deep-teal);">
+    <h2 style="color: var(--primary-deep-teal);">Ready to Protect Your Art?</h2>
+    <p style="color: var(--primary-deep-teal);">Join AuraProtect and gain peace of mind knowing your creative soul is safeguarded.</p>
+    <a href="/register" class="button" style="background-color: var(--primary-deep-teal); color: var(--background-off-white);">Protect Your Art Now</a>
+</section>
+{% endblock %}

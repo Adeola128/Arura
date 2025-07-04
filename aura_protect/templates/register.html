@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Register - AuraProtect{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Create Your AuraProtect Account</h1>
+    <p>Join as a Creator or a Buyer/Collector.</p>
+    <form action="#" method="post"> <!-- Action URL will be defined by backend framework -->
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8">
+        </div>
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" required minlength="8">
+        </div>
+        <div class="form-group">
+            <label for="account_type">Register as:</label>
+            <select id="account_type" name="account_type" style="padding: 12px; width:100%; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                <option value="creator">Creator (Artist, Musician, Designer, etc.)</option>
+                <option value="buyer">Buyer/Collector</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="terms" name="terms" required style="margin-right: 8px;">
+            <label for="terms" style="display: inline; font-weight: normal;">I agree to the <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</label>
+        </div>
+        <button type="submit" class="button">Register</button>
+    </form>
+    <div class="form-links">
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
+</div>
+{% endblock %}

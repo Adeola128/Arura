@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AuraProtect{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Lato&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-deep-teal: #004D40;
+            --accent-gold: #D4AF37;
+            --background-off-white: #F5F5DC;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif; /* Or 'Lato' */
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--background-off-white);
+            color: var(--primary-deep-teal);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--primary-deep-teal);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        header {
+            background-color: var(--primary-deep-teal);
+            color: var(--background-off-white);
+            padding: 1rem 0;
+            text-align: center; /* Placeholder */
+        }
+
+        header a {
+            color: var(--background-off-white);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        header .logo {
+            font-family: var(--font-heading);
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: var(--background-off-white);
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .button, button {
+            background-color: var(--accent-gold);
+            color: var(--primary-deep-teal);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .button:hover, button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: var(--primary-deep-teal);
+            color: var(--background-off-white);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto; /* Pushes footer to the bottom */
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="logo">AuraProtect</span>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/marketplace">Marketplace</a></li>
+                    <li><a href="/ip-protection">IP Protection</a></li>
+                    <li><a href="/creator/dashboard">Creator Dashboard</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> AuraProtect - Safeguarding Nigeria's Creative Soul.</p>
+        <p>
+            <a href="/about">About Us</a> |
+            <a href="/contact">Contact</a> |
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms of Service</a>
+        </p>
+        <!-- Social media links placeholder -->
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% block scripts_extra %}{% endblock %}
+</body>
+</html>

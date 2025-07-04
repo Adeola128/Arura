@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Asset Detail - AuraProtect{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="asset-detail-container">
+        <div class="asset-media">
+            <!-- Placeholder: High-Resolution Media Display -->
+            <!-- For an image: -->
+            <img src="https://via.placeholder.com/800x600.png?text=High+Resolution+Asset+Image" alt="Asset Name">
+            <!-- For a video: -->
+            <!-- <video controls width="100%">
+                <source src="placeholder_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <!-- For audio: -->
+            <!-- <audio controls style="width:100%;">
+                <source src="placeholder_audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio> -->
+            <!-- Image gallery could be implemented here later -->
+        </div>
+
+        <div class="asset-info">
+            <h1>[Asset Title Placeholder]</h1>
+            <p>by <a href="/creator/profile-link-placeholder">[Artist Name Placeholder]</a></p>
+
+            <p class="price">$[Price Placeholder]</p>
+
+            <!-- Purchase Options -->
+            <div class="purchase-options" style="margin-bottom: 20px;">
+                <button class="button">Add to Cart</button>
+                <button class="button" style="background-color: var(--primary-deep-teal); color: var(--background-off-white); margin-left:10px;">Buy Now</button>
+            </div>
+
+            <!-- Detailed Description -->
+            <div class="description-section">
+                <h2>About this Asset</h2>
+                <p>[Detailed information about the asset, its cultural significance, creation process, and artist story will go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]</p>
+            </div>
+
+            <!-- Provenance & IP Details -->
+            <div class="ip-details-section" style="margin-top: 20px; padding:15px; background-color: #f9f9f9; border-radius: 5px;">
+                <h3>Authenticity & IP Status</h3>
+                <p><strong>Provenance:</strong> Verified by AuraProtect.</p>
+                <p><strong>IP Registration:</strong> Registered (ID: AP12345XYZ)</p>
+                <p><strong>Digital Watermark:</strong> Applied</p>
+                <p><a href="/ip-protection#learn-more">Learn more about our IP protection.</a></p>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <!-- Related Assets Section -->
+    <section id="related-assets" class="content-section">
+        <h2>Related Assets</h2>
+        <div class="grid-container">
+            <!-- Placeholder Related Asset Cards -->
+            <div class="asset-card">
+                <img src="https://via.placeholder.com/300x200.png?text=Related+Asset+1" alt="Related Asset 1">
+                <h3>Another Sculpture</h3>
+                <p>Artist: Related Artist</p>
+                <p>Price: $450</p>
+                <a href="#" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+            </div>
+            <div class="asset-card">
+                <img src="https://via.placeholder.com/300x200.png?text=Related+Asset+2" alt="Related Asset 2">
+                <h3>Similar Music</h3>
+                <p>Artist: Sound Alike</p>
+                <p>Price: $12</p>
+                <a href="#" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+            </div>
+            <div class="asset-card">
+                <img src="https://via.placeholder.com/300x200.png?text=Related+Asset+3" alt="Related Asset 3">
+                <h3>Complementary Fashion</h3>
+                <p>Designer: Style Twin</p>
+                <p>Price: $200</p>
+                <a href="#" class="button" style="margin-top:10px; padding: 8px 15px; font-size: 0.9em;">View Details</a>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}
